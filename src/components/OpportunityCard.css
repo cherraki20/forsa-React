@@ -1,0 +1,171 @@
+.opportunity-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--gray-200);
+  padding: 24px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-green);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.opportunity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.opportunity-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 8px;
+}
+
+.opportunity-company {
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.opportunity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+}
+
+.opportunity-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opportunity-type {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.opportunity-description {
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.opportunity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--gray-200);
+}
+
+.opportunity-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.opportunity-date {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.apply-btn {
+  background: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-normal);
+}
+
+.apply-btn:hover:not(:disabled) {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-green);
+}
+
+.apply-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.apply-btn.applied {
+  background: var(--gray-600);
+  cursor: default;
+}
+
+.apply-btn.applied:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .opportunity-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .opportunity-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .opportunity-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .apply-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
